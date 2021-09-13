@@ -1,10 +1,21 @@
-  var swiper1 = new Swiper(".home_slider", {
+  
+  // Run function depends on Page
+  if($('.site-wrapper').hasClass('home_page')){
+    homepage()
+  }else if($('.site-wrapper').hasClass('activities_page')){
+    activitiespage()
+  }
+
+
+function homepage(){
+
+  let swiper1 = new Swiper(".home_slider", {
     navigation: {
       nextEl: '.slider-right-btn',
       prevEl: '.slider-left-btn',
     },
   });
-  var swiper2 = new Swiper(".cardsSlider", {
+  let swiper2 = new Swiper(".cardsSlider", {
     breakpoints: {
 
       "1440": {
@@ -24,7 +35,7 @@
       prevEl: '.cardsSlider-left-btn',
     },
   });
-  var swiper3 = new Swiper(".partnersSlider", {
+  let swiper3 = new Swiper(".partnersSlider", {
     breakpoints: {
 
       "1440": {
@@ -57,13 +68,41 @@
     },
   });
 
+}
+function activitiespage(){
+  let swiper = new Swiper(".cardsSlider", {
+    breakpoints: {
+
+      "1440": {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+      "1144": {
+        spaceBetween: 50,
+        slidesPerView: 3,
+      },
+      "768": {
+        slidesPerView: 2,
+      },
+    },
+    navigation: {
+      nextEl: '.cardsSlider-right-btn',
+      prevEl: '.cardsSlider-left-btn',
+    },
+  });
+}
+
+
+
+
+
+
+
+
 
   // MENU SCRIPT
-
   $(document).ready(function () {
     new WOW().init();
-  
-  
     $(window).scroll(function () {
       if ($(window).scrollTop() > 100) {
         $('.nav-btn-title').fadeOut(function () {

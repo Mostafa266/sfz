@@ -1,44 +1,47 @@
 // Common codes goes here
-*{
+* {
     box-sizing: border-box;
 }
-html{
+
+html {
     direction: rtl;
     overflow-x: hidden;
 
 }
-body{
+
+body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
     font-family: Cairo;
+
     &::-webkit-scrollbar {
-        background: $black; 
+        background: $black;
         width: 8px;
-      }
-      
-      /* Track */
-      &::-webkit-scrollbar-track {
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
         border-radius: 10px;
-      }
-       
-      /* Handle */
-      &::-webkit-scrollbar-thumb {
-        background: $gold; 
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: $gold;
         border-radius: 10px;
-      }
-      
-      /* Handle on hover */
-      &::-webkit-scrollbar-thumb:hover {
-        background: $black; 
-      }
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: $black;
+    }
 }
 
-.alert{
+.alert {
     margin: 1rem 0;
 }
 
-.site-wrapper{
+.site-wrapper {
     width: 100%;
     height: auto;
     display: flex;
@@ -47,102 +50,120 @@ body{
     flex-direction: row-reverse;
 }
 
-.section-container{
+.section-container {
     width: 100%;
     height: 100%;
     padding: 0 4rem 0 0;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-    @include breakpoint(allSmalls){
-    padding: 0 ;
+
+    @include breakpoint(allSmalls) {
+        padding: 0;
     }
 }
-.data-content{
+
+.data-content {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
 }
 
-.btn{
+.btn {
     position: relative;
     border-radius: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
-    a{
+
+    a {
         width: 100%;
         height: 100%;
         text-decoration: none;
         color: $black;
         font-weight: 700;
-      
+
     }
-    &.lg-text{
+
+    &.lg-text {
         font-size: 1.2rem;
-      }
-    &-gold{
-        background-color: $gold ;
-        &:hover{
+    }
+
+    &-gold {
+        background-color: $gold;
+
+        &:hover {
             background-color: $gold;
-            filter: contrast(1.2); 
+            filter: contrast(1.2);
         }
     }
-    &-blue{
-        background-color: $blue ;
-        &:hover{
+
+    &-blue {
+        background-color: $blue;
+
+        &:hover {
             background-color: $blue;
             filter: contrast(1.2);
         }
-        a{
-            color: $white ;
+
+        a {
+            color: $white;
         }
     }
-    &-brown{
-        background-color: $brown ;
-        &:hover{
+
+    &-brown {
+        background-color: $brown;
+
+        &:hover {
             background-color: $brown;
             filter: contrast(1.2);
         }
-        a{
-            color: $white ;
+
+        a {
+            color: $white;
 
         }
     }
-    &-black{
-        background-color: $black ;
-        &:hover{
+
+    &-black {
+        background-color: $black;
+
+        &:hover {
             background-color: $black;
             filter: contrast(1.2);
         }
-        a{
-            color: $white ;
+
+        a {
+            color: $white;
         }
     }
 
-    &-lg{
+    &-lg {
         width: 17.25rem;
     }
-    &-xlg{
+
+    &-xlg {
         width: 15.25rem;
         font-size: 1.5rem;
         padding: 1.5rem 0;
     }
-    &-sm{
+
+    &-sm {
         width: 10.25rem;
         padding: 0.8rem 0;
 
     }
-    
+
 }
 
-.half-header{
+.half-header {
     height: 50vh;
     width: 100vw;
     background-color: $blue;
     position: relative;
-    .text-container{
+
+    .text-container {
         position: relative;
         z-index: 2;
         color: $white;
@@ -151,13 +172,15 @@ body{
         height: 100%;
         padding: 0 0 4rem 0;
     }
-    .bg{
+
+    .bg {
         position: absolute;
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
-        img{
+
+        img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -165,47 +188,54 @@ body{
     }
 }
 
-.primary-title{
+.primary-title {
     color: $brown;
     font-weight: 700;
     margin: 2rem 0;
-    &.black{
+
+    &.black {
         color: $black;
     }
 }
 
-.data-container{
+.data-container {
     padding: 0 6rem 0 0;
     transition: all 0.3s ease-in-out;
-    @include breakpoint(smlaptop){
-        padding: 0 2rem 0 0 ;
+
+    @include breakpoint(smlaptop) {
+        padding: 0 2rem 0 0;
     }
-    @include breakpoint(allSmalls){
-        padding: 0 1rem 0 0 ;
+
+    @include breakpoint(allSmalls) {
+        padding: 0 1rem 0 0;
     }
-    @include breakpoint(smmobile){
-        padding: 0 ;
+
+    @include breakpoint(smmobile) {
+        padding: 0;
     }
 }
-.behind-bg{
+
+.behind-bg {
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: 1;
     width: 100%;
-    img{
+
+    img {
         width: 100%;
     }
 }
+
 // CARDS SLIDER
-.cards-slider-section{
+.cards-slider-section {
     position: relative;
     width: 100%;
     height: auto;
-    margin: 4rem 0 0 0 ;
+    margin: 4rem 0 0 0;
 
 
-    .rounded-card{
+    .rounded-card {
         position: relative;
         width: 100%;
         max-width: 22rem;
@@ -215,17 +245,20 @@ body{
         display: flex;
         justify-content: center;
         flex-direction: column;
-        &-header{
+
+        &-header {
             position: relative;
             margin: 0 auto;
             width: 100%;
             height: auto;
-            img{
+
+            img {
                 border-radius: 0.5rem;
             }
-           
+
         }
-        .btn{
+
+        .btn {
             position: relative;
             margin: 0 auto;
             bottom: 1.5rem;
@@ -233,56 +266,133 @@ body{
         }
     }
 
-   
-    
+
+
 }
-.cardsSlider-navigation{
-        position: absolute;
-     
-        bottom: 42%;
-        flex-direction: column;
-        right: -3%;
-        height: auto;
-        z-index: 2;
+
+.cardsSlider-navigation {
+    position: absolute;
+
+    bottom: 42%;
+    flex-direction: column;
+    right: -3%;
+    height: auto;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    @include breakpoint(smlaptop) {
+        bottom: -10%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        flex-direction: row;
+        width: 8rem;
+    }
+
+    .right,
+    .left {
+        width: 3rem;
+        height: 3rem;
+        margin: 0.5rem 0rem;
+        background: $beige;
+        border-radius: 50%;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        flex-direction: column;
-        @include breakpoint(smlaptop){
-            bottom: -10%;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            flex-direction: row;
-            width: 8rem;
-        }
-        .right,.left{
-            width: 3rem;
-            height: 3rem;
-            margin: 0.5rem 0rem;
-            background: $beige;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            &.bordered-btn{
-                background-color: transparent;
-                border: 1px solid $grey;
-                &:hover{
-                    background-color: $beige;
+        justify-content: center;
+        cursor: pointer;
 
-                }
-            }
-            &:hover{
-                opacity: 0.8;
+        &.bordered-btn {
+            background-color: transparent;
+            border: 1px solid $grey;
+
+            &:hover {
+                background-color: $beige;
+
             }
         }
-        .right{
-            transform: rotate(180deg);
+
+        &:hover {
+            opacity: 0.8;
         }
+    }
+
+    .right {
+        transform: rotate(180deg);
+    }
 }
 
-// ANimation for sliders
 
 
+.play-btn {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    position: relative;
+    background-color: $beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+        color: $white;
+        font-size: 3rem;
+        font-weight: lighter !important;
+    }
+}
+
+
+.gallery-container {
+    margin: 4rem 0;
+
+    .mrt-1 {}
+
+    .img-container {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+
+        img {
+            border: 3px solid transparent;
+            width: 100%;
+            margin: 0 auto;
+            margin: 1rem 0 0 0;
+            &:hover{
+                border: 3px solid $blue;
+                transition: all 0.3s ease-in-out;
+                }
+        }
+    }
+
+    .video-card {
+        width: 100%;
+        margin: 1rem 0 0 0;
+        height: 100%;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+
+        img {
+            width: 100%;
+            margin: 0 auto;
+            border: 3px solid transparent;
+            &:hover{
+            border: 3px solid $blue;
+            transition: all 0.3s ease-in-out;
+            }
+        }
+
+        .play-btn {
+            position: absolute;
+            bottom: 3rem;
+            left: 2rem;
+            &:hover{
+                filter: contrast(0.8);
+            }
+        }
+    }
+}

@@ -2,25 +2,29 @@
 <html lang="en" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/app.css">
-    <title>SFZ</title>
-</head>
-
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+      />
+        <link rel="stylesheet" href="./css/app.css">
+        <title>SFZ</title>
+    </head>
+    
 <body>
     <main class="site-wrapper activities_page">
-
         <nav>
             <div class="nav-btn">
                 <div class="nav-icon">
@@ -31,11 +35,25 @@
                 <span>القائمه</span>
             </div>
         </nav>
-
+        <!-- The blue sidebar -->
+        <aside class="side-bar">
+            <div class="logo">
+                <img src="./imgs/hero.png" alt="hero logo">
+            </div>
+            <div class="social-icons">
+                <a href="#">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </aside>
         <!-- ALl website content goes here -->
         <section class="section-container">
-
-
             <!-- half-header is global in all pages -->
             <header class="half-header">    
                <div class="bg">
@@ -43,20 +61,175 @@
                </div>
                <div class="text-container">
                    <div class="container-fluid">
-                       <h4>اكتشف المزيد</h4>
-                       <h1>الاحتفالات الرئيسيه</h1>
+                       <h4 class="wow animate__animated animate__fadeInUp"data-wow-delay="0.3s" >اكتشف المزيد</h4>
+                       <h1 class="wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">الاحتفالات الرئيسيه</h1>
                    </div>
                </div>
             </header>
             <!-- END HEADER -->
+
+            <div class="standalone_text">
+                <div class="container-fluid">
+                    <p>
+                        يقدم لكم المهرجان مجموعة متنوعة من الأنشطة الممتعة والعروض المميزة والمسابقات الشيّقة، ويشهد العديد من الاحتفالات بمجموعة من المناسبات، لتحظوا بأوقات جميلة وذكريات لا تنسى. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="card_section">
+                <div class="behind-bg">
+                    <img src="./imgs/behind-bg.png" alt="behind-bg">
+                </div>
+                 <!-- Start activities slider  [Gloabl component] -->
+                <div class="data-container">
+                    <div class="cards-slider-section">
+                        <div class="data-container">
+                            <div dir="rtl" class="swiper cardsSlider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="rounded-card">
+                                            <div class="rounded-card-header">
+                                                <img src="./imgs/fifth-city.png" alt="main activities">
+                                            </div>
+                                            <div class="btn btn-primary btn-lg btn-blue">
+                                                <a href="#">
+                                                    منطقة عام الخمسين
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="rounded-card">
+                                            <div class="rounded-card-header">
+                                                <img src="./imgs/united.png" alt="main activities">
+                                            </div>
+                                            <div class="btn btn-primary btn-lg btn-brown">
+                                                <a href="#">
+                                                    مسيرة الاتحاد
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="rounded-card">
+                                            <div class="rounded-card-header">
+                                                <img src="./imgs/national-day.png" alt="main activities">
+                                            </div>
+                                            <div class="btn btn-primary btn-lg btn-black">
+                                                <a href="#">
+                                                    احتفالات اليوم الوطني
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardsSlider-navigation">
+                            <div class="right cardsSlider-right-btn bordered-btn">
+                                <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="left cardsSlider-left-btn bordered-btn">
+                                <i class="fas fa-chevron-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="gallery_section">
+                <div class="container-fluid">
+                    <h1 class="primary-title wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">أنشطة المهرجان</h1>
+                    <div class="gallery-container">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <div class="img-container wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                                                <a 
+                                                href="./imgs/gallery-1.png"
+                                                data-fancybox="gallery"
+                                                data-caption="Image caption"
+                                                >
+                                                <img src="./imgs/gallery-1.png" alt="">
+
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="img-container wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                                                <a 
+                                                href="./imgs/gallery-2.png"
+                                                data-fancybox="gallery"
+                                                data-caption="Image caption"
+                                                >
+                                                <img src="./imgs/gallery-2.png" alt="">
+
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mrt-1">
+                                        <div class="col-12 col-md-6">
+                                            <div class="img-container wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
+                                                <a 
+                                                href="./imgs/gallery-3.png"
+                                                data-fancybox="gallery"
+                                                data-caption="Image caption"
+                                                >
+                                                <img src="./imgs/gallery-3.png" alt="">
+
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="img-container wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+                                                <a 
+                                                href="./imgs/gallery-4.png"
+                                                data-fancybox="gallery"
+                                                data-caption="Image caption"
+                                                >
+                                                <img src="./imgs/gallery-4.png" alt="">
+
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="video-card wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+                                        <a 
+                                        href="https://video-previews.elements.envatousercontent.com/files/a0db62ca-187c-4e52-820f-cfff5742b2ba/video_preview_h264.mp4"
+                                        data-fancybox="gallery"
+                                        data-caption="Video title"
+                                        >
+                                            <img src="./imgs/video-poster.png" alt="video-poster">
+                                        </a>
+                                        <div class="play-btn">
+                                            <i class="far fa-play-circle"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+
+
+
+
             <footer>
                 <div class="container-fluid">
                   <div class="data-container">
                     <div class="row">
                         <div class="col-12 col-md-4 text-right">
                             <div class="data-content">
-                                <img src="./imgs/hori_logo.png" alt="zayed festival">
-                                <p>
+                                <img src="./imgs/hori_logo.png" alt="zayed festival" class=" wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                                <p class=" wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
                                     يقدم لكم المهرجان مجموعة متنوعة من الأنشطة الممتعة والعروض المميزة والمسابقات الشيّقة، ويشهد العديد من الاحتفالات بمجموعة من المناسبات، لتحظوا بأوقات جميلة وذكريات لا تنسى. 
                                 </p>
                             </div>
@@ -64,27 +237,27 @@
                         <div class="col-12 col-md-3">
                             <div class="data-content">
                                 <div class="footer-links">
-                                    <h3>روابط سريعة</h3>
+                                    <h3 class=" wow animate__animated animate__fadeInUp" data-wow-delay="0.7s">روابط سريعة</h3>
                                 <ul>
-                                    <li><a href="#">أنشطة المهرجان</a></li>
-                                    <li><a href="#">تاريخ المهرجان</a></li>
-                                    <li><a href="#">الحضاره</a></li>
-                                    <li><a href="#">المركز الإعلامي </a></li>
-                                    <li><a href="#">تواصل معنا</a></li>
+                                    <li class=" wow animate__animated animate__fadeInUp" data-wow-delay="0.8s"><a href="#">أنشطة المهرجان</a></li>
+                                    <li class=" wow animate__animated animate__fadeInUp" data-wow-delay="0.9s"><a href="#">تاريخ المهرجان</a></li>
+                                    <li class=" wow animate__animated animate__fadeInUp" data-wow-delay="1s"><a href="#">الحضاره</a></li>
+                                    <li class=" wow animate__animated animate__fadeInUp" data-wow-delay="1.1s"><a href="#">المركز الإعلامي </a></li>
+                                    <li class=" wow animate__animated animate__fadeInUp" data-wow-delay="1.1s"><a href="#">تواصل معنا</a></li>
                                 </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-md-3">
                             <div class="footer-news">
-                                <h3>النشرة البريدية</h3>
-                                <p>اشترك الان في النشرة البريدية ليصلك كل جديد</p>
-                                <input type="email" placeholder="البريد الإلكتروني">
+                                <h3 class=" wow animate__animated animate__fadeInUp" data-wow-delay="0.7s">النشرة البريدية</h3>
+                                <p class=" wow animate__animated animate__fadeInUp" data-wow-delay="0.8s">اشترك الان في النشرة البريدية ليصلك كل جديد</p>
+                                <input class=" wow animate__animated animate__fadeInUp" data-wow-delay="0.9s" type="email" placeholder="البريد الإلكتروني">
                                 <!-- Use this alert [ ZIZO ] -->
                                 <!-- <div class="alert alert-danger" role="alert">
                                     A simple danger alert—check it out!
                                 </div> -->
-                                <div class="btn btn-primary btn-sm btn-gold lg-text">
+                                <div class="btn btn-primary btn-sm btn-gold lg-text wow animate__animated animate__fadeInUp" data-wow-delay="1s">
                                     <a href="#">
                                         اشترك الأن
                                     </a>
@@ -113,42 +286,21 @@
             </footer>
             
         </section>
-
-
-
-
-
-        <!-- The blue sidebar -->
-        <aside class="side-bar">
-            <div class="logo">
-                <img src="./imgs/hero.png" alt="hero logo">
-            </div>
-            <div class="social-icons">
-                <a href="#">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-            </div>
-        </aside>
-
-
-
-
-
+        
+    
 
     </main>
 
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="./js/script.js"></script>
 </body>
 

@@ -93,18 +93,11 @@
         }
     }
     
-    .book-ticket{
-        position: relative;
-        height: auto;
-        padding: 2rem 0;
-        background-color: $blue;
-        color: $white;
-        .text-container{
-            width: 70%;
-            @include breakpoint(allSmalls){
-                width: 100%;
-            }
-        }
-    
-    }
+   .standalone_text{
+    padding: 4rem 0;
+   }
+   .card_section{
+       position: relative;
+       margin: 0 0 5rem 0;
+   }
 }
