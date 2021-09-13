@@ -1,0 +1,351 @@
+.home_page {
+    header {
+        width: 100%;
+        height: 100vh;
+        background: rgb(255, 255, 255);
+
+        .home_slider {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .slider-navigation {
+            position: absolute;
+            bottom: 4%;
+            left: 4%;
+            height: 4rem;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .right,
+            .left {
+                width: 3rem;
+                height: 3rem;
+                margin: 0 0.5rem;
+                background: $beige;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+
+            .right {
+                transform: rotate(180deg);
+            }
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+            .slide-content {
+                width: 100vw;
+                height: 100%;
+
+                .slide-header {
+                    width: 100%;
+                    height: auto;
+                    position: absolute;
+                    z-index: 2;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .slide-body {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    .bg {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        z-index: -1;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .text-container {
+                        position: absolute;
+                        left: 20%;
+                        z-index: 2;
+                        margin: -29vh 0 0 0;
+                        color: $white;
+                        text-align: right;
+                        h1 {
+                            font-weight: 700;
+                        }
+                        @include breakpoint(mobile) {
+                        margin: -19vh 0 0 0;
+                        padding: 0 3rem 0 0;
+                        }
+                        @include breakpoint(smmobile) {
+                        margin: -19vh 0 0 0;
+                        padding: 0 3rem 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .book-ticket {
+        position: relative;
+        height: auto;
+        padding: 2rem 0;
+        background-color: $blue;
+        color: $white;
+
+        .text-container {
+            width: 70%;
+
+            @include breakpoint(allSmalls) {
+                width: 100%;
+            }
+            @include breakpoint(mobile) {
+                text-align: center;
+            }
+            @include breakpoint(smmobile) {
+                text-align: center;
+            }
+        }
+
+    }
+
+    .activities_section {
+        position: relative;
+        width: 100%;
+        padding: 4rem 0;
+        @include breakpoint(mobile) {
+            text-align: center;
+        }
+        @include breakpoint(smmobile) {
+            text-align: center;
+        }
+        .data-content {
+            justify-content: flex-start;
+         
+        }
+        .data-container{
+            @include breakpoint(mobile) {
+                padding: 0;
+            }
+            @include breakpoint(smmobile) {
+                padding: 0;
+            }
+        }
+
+    }
+
+    .civilization_section {
+        background-color: $lightBeige;
+        margin-bottom: 4rem;
+        padding: 3rem 0;
+     
+        .data-container {
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            align-items: flex-start;
+            @include breakpoint(mobile) {
+                align-items: center;
+                margin: 1rem 0;
+            }
+            @include breakpoint(smmobile) {
+                align-items: center;
+                margin: 1rem 0;
+            }
+        }
+
+        .primary-title {
+            margin: 0.5rem 0;
+        }
+
+        .left-content {
+            @include breakpoint(allSmalls) {
+                margin-top: 5rem;
+            }
+
+            @include breakpoint(allSmalls) {
+                text-align: center;
+            }
+
+            img {
+                position: relative;
+                left: -3rem;
+                max-width: 30rem;
+
+                @include breakpoint(allSmalls) {
+                    left: -1rem;
+                    margin: 0 auto;
+                }
+
+                @include breakpoint(smlaptop) {
+                    left: 5rem;
+                }
+
+                @include breakpoint(tablet) {
+                    left: 5rem;
+                }
+
+                @include breakpoint(lgmobile) {
+                    left: 0;
+                }
+            }
+        }
+
+        .text-container {
+            width: 70%;
+            margin: 2rem 0;
+
+            @include breakpoint(allSmalls) {
+                width: 100%;
+            }
+
+            p {
+                color: $brown;
+            }
+        }
+    }
+
+    .partners_section {
+        position: relative;
+        width: 100%;
+        padding: 4rem 0;
+        .behind-bg{
+            @include breakpoint(smmobile) {
+                bottom: 23%;
+            }
+        }
+        .data-container {
+            position: relative;
+            z-index: 22;
+            @include breakpoint(mobile) {
+                text-align: center;
+            }
+            @include breakpoint(smmobile) {
+                text-align: center;
+            }
+        }
+
+        .data-content {
+            justify-content: flex-start;
+        }
+
+        &-slider {
+            margin: 5rem 0;
+            user-select: none;
+
+            .partner-card {
+                position: relative;
+                width: auto;
+                max-width: 16rem;
+                min-width: 12rem;
+                height: 12rem;
+                background-color: #F7F7F7;
+                border: 1px solid $gold;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem;
+
+                @include breakpoint(smmobile) {
+                    max-width: 10rem;
+
+                    img {
+                        width: 100%;
+                    }
+
+                }
+            }
+
+            .swiper-button-prev:after,
+            .swiper-rtl .swiper-button-next:after {
+                display: none !important;
+            }
+
+            .partnersSlider-button-next {
+                width: 3rem;
+                height: 3rem;
+                margin: 0.5rem 0rem;
+                background: $beige;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                &.bordered-btn {
+                    background-color: transparent;
+                    border: 1px solid $grey;
+
+                    i {
+                        color: $grey
+                    }
+
+                    &:hover {
+                        background-color: $beige;
+
+                    }
+                }
+            }
+
+            .partnersSlider-button-prev {
+                width: 3rem;
+                height: 3rem;
+                margin: 0.5rem 0rem;
+                background: $beige;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                &.bordered-btn {
+                    background-color: transparent;
+                    border: 1px solid $grey;
+
+                    i {
+                        color: $grey
+                    }
+
+                    &:hover {
+                        background-color: $beige;
+
+                    }
+                }
+
+                i {
+                    transform: rotate(180deg);
+
+                }
+            }
+        }
+
+        .btn {
+            margin: 0 auto;
+        }
+    }
+}

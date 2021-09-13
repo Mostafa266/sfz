@@ -1,0 +1,45 @@
+aside{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 4rem;
+    background: $blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem 0.5rem;
+    @include breakpoint(allSmalls){
+        display: none;
+    }
+    .logo{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    .social-icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        a{
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            margin: 0.5rem 0;
+            border: 1px solid #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                background: #fff;
+                color: $brown;
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+footer{
+    position: relative;
+    background-color: $blue;
+    padding: 4rem 0;
+    color: $white;
+    .data-content{
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        p{
+            margin: 2rem 0;
+        }
+    }
+    .footer-links{
+        @include breakpoint(tablet){
+            margin-top: 2rem;
+           }
+        @include breakpoint(mobile){
+            margin-top: 2rem;
+           }
+        @include breakpoint(smmobile){
+            margin-top: 2rem;
+           }
+
+        ul{
+            list-style: ' - ';
+            margin: 2rem 0 0 0;
+            padding: 0;
+            li{
+                margin: 0.4rem 0;
+                a{
+                        transition: all 0.3s ease-in-out;
+                        position: relative;
+                    color: $white;
+                    text-decoration: none;
+                    &::before{
+                        position: absolute;
+                        content: '';
+                        right: 0;
+                        bottom: -0.2rem;
+                        height: 2px;
+                        width: 0%;
+                        background-color: $gold;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &:hover {
+                        color: $gold;
+                        &::before{
+                            position: absolute;
+                            width: 100%;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    .footer-news{
+        position: relative;
+        @include breakpoint(tablet){
+            margin-top: 2rem;
+           }
+        @include breakpoint(mobile){
+            margin-top: 2rem;
+           }
+        @include breakpoint(smmobile){
+            margin-top: 2rem;
+           }
+        input{
+            background-color: rgba(145, 145, 145, 0.2);
+            box-shadow: none;
+            border: 1px solid $white;
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 0.4rem;
+            &::placeholder{
+                color: $white;
+            }
+        }
+        .btn{
+            margin: 1rem auto 0 0;
+        }
+    }
+}

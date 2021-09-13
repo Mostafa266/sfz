@@ -1,0 +1,286 @@
+// Common codes goes here
+*{
+    box-sizing: border-box;
+}
+html{
+    direction: rtl;
+    overflow-x: hidden;
+
+}
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Cairo;
+    &::-webkit-scrollbar {
+        background: $black; 
+        width: 8px;
+      }
+      
+      /* Track */
+      &::-webkit-scrollbar-track {
+        border-radius: 10px;
+      }
+       
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: $gold; 
+        border-radius: 10px;
+      }
+      
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: $black; 
+      }
+}
+
+
+.site-wrapper{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.section-container{
+    width: 100%;
+    height: 100%;
+    padding: 0 4rem 0 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    @include breakpoint(allSmalls){
+    padding: 0 ;
+    }
+}
+.data-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.btn{
+    position: relative;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    a{
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: $black;
+        font-weight: 700;
+      
+    }
+    &.lg-text{
+        font-size: 1.2rem;
+      }
+    &-gold{
+        background-color: $gold ;
+        &:hover{
+            background-color: $gold;
+            filter: contrast(1.2); 
+        }
+    }
+    &-blue{
+        background-color: $blue ;
+        &:hover{
+            background-color: $blue;
+            filter: contrast(1.2);
+        }
+        a{
+            color: $white ;
+        }
+    }
+    &-brown{
+        background-color: $brown ;
+        &:hover{
+            background-color: $brown;
+            filter: contrast(1.2);
+        }
+        a{
+            color: $white ;
+
+        }
+    }
+    &-black{
+        background-color: $black ;
+        &:hover{
+            background-color: $black;
+            filter: contrast(1.2);
+        }
+        a{
+            color: $white ;
+        }
+    }
+
+    &-lg{
+        width: 17.25rem;
+    }
+    &-xlg{
+        width: 15.25rem;
+        font-size: 1.5rem;
+        padding: 1.5rem 0;
+    }
+    &-sm{
+        width: 10.25rem;
+        padding: 0.8rem 0;
+
+    }
+    
+}
+
+.half-header{
+    height: 50vh;
+    width: 100vw;
+    background-color: $blue;
+    position: relative;
+    .text-container{
+        position: relative;
+        z-index: 2;
+        color: $white;
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+        padding: 0 0 4rem 0;
+    }
+    .bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.primary-title{
+    color: $brown;
+    font-weight: 700;
+    margin: 2rem 0;
+    &.black{
+        color: $black;
+    }
+}
+
+.data-container{
+    padding: 0 6rem 0 0;
+    transition: all 0.3s ease-in-out;
+    @include breakpoint(smlaptop){
+        padding: 0 2rem 0 0 ;
+    }
+    @include breakpoint(allSmalls){
+        padding: 0 1rem 0 0 ;
+    }
+    @include breakpoint(smmobile){
+        padding: 0 ;
+    }
+}
+.behind-bg{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    img{
+        width: 100%;
+    }
+}
+
+
+// CARDS SLIDER
+.cards-slider-section{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 4rem 0 0 0 ;
+
+
+    .rounded-card{
+        position: relative;
+        width: 100%;
+        max-width: 22rem;
+        height: auto;
+        min-height: 35rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        &-header{
+            position: relative;
+            margin: 0 auto;
+            width: 100%;
+            height: auto;
+            img{
+                border-radius: 0.5rem;
+            }
+           
+        }
+        .btn{
+            position: relative;
+            margin: 0 auto;
+            bottom: 1.5rem;
+            border-radius: 0.5rem;
+        }
+    }
+
+   
+    
+}
+ .cardsSlider-navigation{
+        position: absolute;
+     
+        bottom: 42%;
+        flex-direction: column;
+        right: -3%;
+        height: auto;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        @include breakpoint(smlaptop){
+            bottom: -10%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            flex-direction: row;
+            width: 8rem;
+        }
+        .right,.left{
+            width: 3rem;
+            height: 3rem;
+            margin: 0.5rem 0rem;
+            background: $beige;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            &.bordered-btn{
+                background-color: transparent;
+                border: 1px solid $grey;
+                &:hover{
+                    background-color: $beige;
+
+                }
+            }
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+        .right{
+            transform: rotate(180deg);
+        }
+}
+
+
+
