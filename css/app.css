@@ -522,6 +522,8 @@ footer {
 }
 
 footer .data-content {
+  position: relative;
+  z-index: 22;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -536,6 +538,11 @@ footer .data-content {
 
 footer .data-content p {
   margin: 2rem 0;
+}
+
+footer .footer-links {
+  position: relative;
+  z-index: 22;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -597,6 +604,7 @@ footer .footer-links ul li a:hover::before {
 
 footer .footer-news {
   position: relative;
+  z-index: 22;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -645,6 +653,129 @@ footer .footer-news input::placeholder {
 
 footer .footer-news .btn {
   margin: 1rem auto 0 0;
+}
+
+footer .king-photo {
+  position: absolute;
+  left: 0;
+  width: 24rem;
+  top: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  footer .king-photo {
+    top: auto;
+    bottom: 0;
+    opacity: 0.5;
+  }
+}
+
+footer .king-photo img {
+  width: 100%;
+}
+
+footer .under-footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 3rem;
+  border-top: 1px solid #4B4D5A;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+footer .under-footer .data-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  footer .under-footer .data-container span {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  footer .under-footer .data-container span {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  footer .under-footer .data-container span {
+    font-size: 0.4rem;
+  }
+}
+
+footer .under-footer .data-container .policies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer .under-footer .data-container .policies li {
+  margin: 0 0.5rem;
+  position: relative;
+}
+
+footer .under-footer .data-container .policies li:not(:first-child)::before {
+  position: absolute;
+  content: '';
+  right: -0.5rem;
+  top: 0;
+  width: 2px;
+  background-color: #ffffff;
+  height: 100%;
+}
+
+@media only screen and (max-width: 375px) {
+  footer .under-footer .data-container .policies li:not(:first-child)::before {
+    height: 50%;
+    top: 45%;
+  }
+}
+
+footer .under-footer .data-container .policies li a {
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+  footer .under-footer .data-container .policies li a {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  footer .under-footer .data-container .policies li a {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  footer .under-footer .data-container .policies li a {
+    font-size: 0.5rem;
+  }
 }
 
 .home_page header {
