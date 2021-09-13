@@ -965,6 +965,12 @@ footer .under-footer .data-container .policies li a {
   height: auto;
   position: absolute;
   z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-5rem);
+          transform: translateY(-5rem);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .home_page header .swiper-slide .slide-content .slide-header img {
@@ -1007,6 +1013,15 @@ footer .under-footer .data-container .policies li a {
 
 .home_page header .swiper-slide .slide-content .slide-body .text-container h1 {
   font-weight: 700;
+  -webkit-transform: translateY(4rem);
+          transform: translateY(4rem);
+}
+
+.home_page header .swiper-slide .slide-content .slide-body .text-container h2 {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+  -webkit-transform: translateY(5rem);
+          transform: translateY(5rem);
 }
 
 @media only screen and (max-width: 575px) {
@@ -1021,6 +1036,29 @@ footer .under-footer .data-container .policies li a {
     margin: -19vh 0 0 0;
     padding: 0 3rem 0 0;
   }
+}
+
+.home_page header .swiper-slide .slide-content .slide-body .text-container > * {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.home_page header .swiper-slide-active .slide-header {
+  visibility: visible !important;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform: none !important;
+          transform: none !important;
+  opacity: 1 !important;
+}
+
+.home_page header .swiper-slide-active .text-container > * {
+  visibility: visible !important;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform: none !important;
+          transform: none !important;
+  opacity: 1 !important;
 }
 
 .home_page .book-ticket {
