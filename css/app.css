@@ -550,6 +550,13 @@ nav .nav-btn {
   transition: all 0.3s ease-in-out;
 }
 
+@media only screen and (max-width: 1024px) {
+  nav .nav-btn {
+    top: -8px;
+    position: relative;
+  }
+}
+
 nav .nav-btn.nav-collapse {
   background-color: #283C65;
   width: auto;
