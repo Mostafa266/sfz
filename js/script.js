@@ -1,13 +1,10 @@
-var swiper = new Swiper(".home_slider", {
+var swiper1 = new Swiper(".home_slider", {
     navigation: {
         nextEl: '.slider-right-btn',
         prevEl: '.slider-left-btn',
     },
 });
-
-
-
-var swiper = new Swiper(".cardsSlider", {
+var swiper2 = new Swiper(".cardsSlider", {
     breakpoints: {
         
         "1440": {
@@ -27,9 +24,7 @@ var swiper = new Swiper(".cardsSlider", {
         prevEl: '.cardsSlider-left-btn',
     },
 });
-
-
-var swiper = new Swiper(".partnersSlider", {
+var swiper3 = new Swiper(".partnersSlider", {
     breakpoints: {
         
         "1440": {
@@ -60,4 +55,21 @@ var swiper = new Swiper(".partnersSlider", {
         nextEl: '.partnersSlider-button-next',
         prevEl: '.partnersSlider-button-prev',
     },
+});
+
+
+// MENU SCRIPT
+
+$(document).ready(function(){
+  $(window).scroll(function(){
+      if ($(window).scrollTop() > 100){
+          $('.nav-btn-title').fadeOut(function(){
+            $('.nav-btn').addClass('nav-collapse')
+          });
+          
+      }else{
+        $('.nav-btn-title').fadeIn();
+        $('.nav-btn').removeClass('nav-collapse')
+      }
+  });
 });

@@ -36,6 +36,10 @@ body::-webkit-scrollbar-thumb:hover {
   background: #1D1C24;
 }
 
+.alert {
+  margin: 1rem 0;
+}
+
 .site-wrapper {
   width: 100%;
   height: auto;
@@ -456,9 +460,72 @@ aside .social-icons a:hover {
 nav {
   position: fixed;
   left: 0;
-  top: 4rem;
+  top: 2rem;
   z-index: 99;
   color: #ffffff;
+}
+
+@media only screen and (max-width: 1024px) {
+  nav {
+    width: 100vw;
+    height: 4rem;
+    top: 0;
+    background-color: #283C65;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1rem 2rem 1rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  nav {
+    width: 100vw;
+    height: 4rem;
+    top: 0;
+    background-color: #283C65;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1rem 2rem 1rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  nav {
+    width: 100vw;
+    height: 4rem;
+    top: 0;
+    background-color: #283C65;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1rem 2rem 1rem 1rem;
+  }
+}
+
+nav .nav-hero {
+  height: 100%;
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  nav .nav-hero {
+    display: block;
+  }
+}
+
+nav .nav-hero img {
+  height: 100%;
 }
 
 nav .nav-btn {
@@ -479,6 +546,18 @@ nav .nav-btn {
   width: 8.5rem;
   padding: 0 1rem;
   border-radius: 0 2rem 2rem 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+nav .nav-btn.nav-collapse {
+  background-color: #283C65;
+  width: auto;
+  padding: 0 1rem 0 0.5rem;
+}
+
+nav .nav-btn-title {
+  position: relative;
 }
 
 nav .nav-btn .nav-icon {
