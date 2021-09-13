@@ -355,7 +355,23 @@ body {
         text-align: center;
         position: relative;
         cursor: pointer;
-
+        .play-btn{
+            left: 0;
+            bottom: 45%;
+            top: auto;
+            right: 0;
+            margin: 0 auto;
+            @include breakpoint(smmobile){
+                width: 2rem;
+                height: 2rem;
+                i{
+                    font-size: 1rem;
+                }
+            }
+        }
+        a{
+            text-decoration: none;
+        }
         img {
             border: 3px solid transparent;
             width: 100%;
@@ -399,4 +415,16 @@ body {
             }
         }
     }
+}
+
+
+.standalone_text{
+    padding: 4rem 0;
+    p{
+        font-weight: 700;
+        width: 60%;
+        @include breakpoint(allSmalls){
+            width: 100%;
+        } 
+   }
 }

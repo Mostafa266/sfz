@@ -417,6 +417,28 @@ body::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
 }
 
+.gallery-container .img-container .play-btn {
+  left: 0;
+  bottom: 45%;
+  top: auto;
+  right: 0;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 375px) {
+  .gallery-container .img-container .play-btn {
+    width: 2rem;
+    height: 2rem;
+  }
+  .gallery-container .img-container .play-btn i {
+    font-size: 1rem;
+  }
+}
+
+.gallery-container .img-container a {
+  text-decoration: none;
+}
+
 .gallery-container .img-container img {
   border: 3px solid transparent;
   width: 100%;
@@ -461,6 +483,21 @@ body::-webkit-scrollbar-thumb:hover {
 .gallery-container .video-card .play-btn:hover {
   -webkit-filter: contrast(0.8);
           filter: contrast(0.8);
+}
+
+.standalone_text {
+  padding: 4rem 0;
+}
+
+.standalone_text p {
+  font-weight: 700;
+  width: 60%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .standalone_text p {
+    width: 100%;
+  }
 }
 
 aside {
@@ -1583,21 +1620,6 @@ footer .under-footer .data-container .policies li a {
 
 .activities_page header .swiper-slide .slide-content .slide-body .text-container h1 {
   font-weight: 700;
-}
-
-.activities_page .standalone_text {
-  padding: 4rem 0;
-}
-
-.activities_page .standalone_text p {
-  font-weight: 700;
-  width: 60%;
-}
-
-@media only screen and (max-width: 1024px) {
-  .activities_page .standalone_text p {
-    width: 100%;
-  }
 }
 
 .activities_page .card_section {
