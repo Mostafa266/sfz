@@ -95,9 +95,27 @@
     
    .standalone_text{
     padding: 4rem 0;
+    p{
+        font-weight: 700;
+        width: 60%;
+        @include breakpoint(allSmalls){
+            width: 100%;
+        } 
    }
+}
    .card_section{
        position: relative;
        margin: 0 0 5rem 0;
+     
+       .data-container{
+           padding: 0 4rem 0 0 ;
+           @include breakpoint(smlaptop) {
+            padding: 0;
+        }
+        @include breakpoint(allSmalls) {
+            padding: 0;
+        }
+
+       }
    }
 }
