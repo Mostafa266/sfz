@@ -635,6 +635,116 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
+.festival_values {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.festival_values .values-container {
+  position: relative;
+  margin: 5rem 0 3rem 0;
+}
+
+.festival_values .values-container .value-circle {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 1rem;
+}
+
+.festival_values .values-container .value-circle--header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #965141;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  height: auto;
+  min-width: 13rem;
+  min-height: 13rem;
+  border-radius: 50%;
+  background: #FBF7F4;
+}
+
+@media only screen and (max-width: 1024px) {
+  .festival_values .values-container .value-circle--header {
+    min-width: 10rem;
+    min-height: 10rem;
+  }
+}
+
+.festival_values .values-container .value-circle--header img {
+  width: 50%;
+}
+
+.festival_values .values-container .value-circle--text {
+  margin: 1rem 0;
+  color: #4B4D5A;
+  font-weight: 700;
+}
+
+.map-section {
+  position: relative;
+  width: 100vw;
+  height: 40rem;
+  background-color: rebeccapurple;
+}
+
+.map-section img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.map-section iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.text-img-section {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.text-img-section .text-container p {
+  line-height: 2.5rem;
+  width: 90%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .text-img-section .text-container p {
+    width: 100%;
+  }
+}
+
+.text-img-section .img-container {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.text-img-section .img-container img {
+  width: 70%;
+}
+
 aside {
   position: fixed;
   right: 0;

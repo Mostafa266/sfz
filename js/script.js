@@ -6,7 +6,6 @@
     activitiespage()
   }
 
-
 function homepage(){
 
   let swiper1 = new Swiper(".home_slider", {
@@ -91,14 +90,6 @@ function activitiespage(){
     },
   });
 }
-
-
-
-
-
-
-
-
 
   // MENU SCRIPT
   $(document).ready(function () {
