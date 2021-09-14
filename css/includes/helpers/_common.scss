@@ -93,7 +93,7 @@ body {
     }
 
     &-gold {
-        background-color: $gold;
+        background-color: $gold ;
 
         &:hover {
             background-color: $gold;
@@ -154,6 +154,16 @@ body {
     &-sm {
         width: 10.25rem;
         padding: 0.8rem 0;
+
+    }
+    &-disabled{
+        background-color: #C1C1C1;
+        a{
+            color:#696969 ;
+        }
+        &:hover {
+        background-color: #C1C1C1;
+        }
 
     }
 
@@ -657,6 +667,16 @@ body {
             }
         }
     }
+    &.small-lineHeight{
+        img{
+            width: 80%;
+            margin-bottom: 2rem;
+        }
+        p{
+            line-height: 1.8rem;
+
+        }
+    }
 }
 
 .flags-slider {
@@ -992,7 +1012,30 @@ body {
         }
     }
 }
+.book-ticket {
+    position: relative;
+    height: auto;
+    padding: 2rem 0;
+    background-color: $blue;
+    color: $white;
 
+    .text-container {
+        width: 70%;
+
+        @include breakpoint(allSmalls) {
+            width: 100%;
+        }
+
+        @include breakpoint(mobile) {
+            text-align: center;
+        }
+
+        @include breakpoint(smmobile) {
+            text-align: center;
+        }
+    }
+
+}
 .strip{
     position: relative;
     width: 100vw;
@@ -1000,4 +1043,118 @@ body {
     padding: 0.5rem;
     background-color:$lightGrey ;
     margin: 3rem 0;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.lg-p{
+    font-size: 1.3rem;
+}
+
+.mr-bt-5{
+    margin-bottom: 5rem;
+}
+
+
+
+.main-gallery{
+    position: relative;
+    height: auto;
+    width: 100%;
+    .card-content{
+        display: none;
+        &.active{
+            display: block;
+        }
+    }
+    &--header{
+        height: 10rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .btn{
+            margin: 0 0.5rem;
+            z-index: 22;
+            &.active{
+                background-color: $gold !important;
+                a{
+                    color:$black !important;
+                }
+            }
+        }
+        .line{
+            position: absolute;
+            left: 0;
+            width: 40%;
+            height: 2px;
+            background-color: $grey;
+            &.right{
+                right: 0;
+                left:auto;
+            }
+        }
+    
+
+    }
+    &--body{
+        margin: 4rem 0;
+        .content{
+            display: grid; 
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+            grid-template-rows: 1fr 1fr 1fr; 
+            gap: 0px 0px; 
+            grid-template-areas: 
+              ". . . . ."
+              ". . . . ."
+              ". . . . ."; 
+              @include breakpoint(allSmalls){
+                grid-template-columns: 1fr 1fr; 
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
+                gap: 0px 0px; 
+                grid-template-areas: 
+                  ". ."
+                  ". ."
+                  ". ."
+                  ". ."
+                  ". ."
+                  ". ."; 
+               }
+               @include breakpoint(mobile){
+                grid-template-columns: 1fr; 
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
+                gap: 0px 0px; 
+                grid-template-areas: 
+                  "."
+                  "."
+                  "."
+                  "."
+                  "."
+                  "."; 
+               }
+               .play-btn{
+                position: absolute;
+                top: 35%;
+                right: 40%;
+                text-decoration: none;
+               }
+           }
+        .img-container{
+            width: auto;
+            max-width: 25rem;
+            margin: 0.5rem;
+            position: relative;
+            @include breakpoint(mobile){
+                margin: 0.5rem auto;
+            }
+            img{
+                width:100%;
+                object-fit: cover;
+                height: 100%;
+            }
+        }
+    }
 }

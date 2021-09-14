@@ -150,4 +150,36 @@ function activitiespage(){
         $('.nav-btn').removeClass('nav-collapse')
       }
     });
+
+
+
+    // TABS in GALLERY
+    $('.main-gallery--tabs-btn').on('click', function (e) {
+      e.preventDefault()
+
+      $('.main-gallery--tabs-btn').removeClass('active')
+      $(this).addClass('active');
+      let btnAttr = $(this).attr('data-target-content');
+      let cardAttr = $('.card-content');
+  
+  
+      cardAttr.filter(function () {
+          
+          if(btnAttr === 'photos'){
+              $('.main-gallery--videos').fadeOut(function(){
+              $('.main-gallery--photos').fadeIn()
+
+              })
+         
+            
+          }else if(btnAttr === 'videos'){
+              $('.main-gallery--photos').fadeOut(function(){
+              $('.main-gallery--videos').fadeIn()
+
+              })
+        }
+        
+      })
+  })
+  
   });

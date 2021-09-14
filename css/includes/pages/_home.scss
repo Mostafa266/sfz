@@ -155,30 +155,7 @@
         }
     }
 
-    .book-ticket {
-        position: relative;
-        height: auto;
-        padding: 2rem 0;
-        background-color: $blue;
-        color: $white;
-
-        .text-container {
-            width: 70%;
-
-            @include breakpoint(allSmalls) {
-                width: 100%;
-            }
-
-            @include breakpoint(mobile) {
-                text-align: center;
-            }
-
-            @include breakpoint(smmobile) {
-                text-align: center;
-            }
-        }
-
-    }
+   
 
     .activities_section {
         position: relative;
