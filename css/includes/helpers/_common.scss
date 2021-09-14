@@ -162,7 +162,7 @@ body {
     width: 100vw;
     background-color: $blue;
     position: relative;
-    max-height: 25rem;
+    max-height: 35rem;
 
     .text-container {
         position: relative;
@@ -172,6 +172,9 @@ body {
         align-items: flex-end;
         height: 100%;
         padding: 0 0 4rem 0;
+        h1{
+            font-weight: 700;
+        }
     }
 
     .bg {
@@ -440,6 +443,10 @@ body {
 .accordion_section{
     position: relative;
     margin: 1rem 0 6rem 0;
+    .accordion-item{
+        margin: 0.6rem 0;
+        border: none;
+    }
     .accordion-button{
         background-color: $lightGrey;
         border: none;
@@ -493,6 +500,12 @@ body {
     .partner-card{
         margin: 0.3rem;
         min-width: 25rem;
+        @include breakpoint(mobile){
+            min-width: 18rem;
+        }
+        @include breakpoint(smmobile){
+            min-width: 18rem;
+        }
     }
 }
 

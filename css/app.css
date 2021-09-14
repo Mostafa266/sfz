@@ -185,7 +185,7 @@ body::-webkit-scrollbar-thumb:hover {
   width: 100vw;
   background-color: #283C65;
   position: relative;
-  max-height: 25rem;
+  max-height: 35rem;
 }
 
 .half-header .text-container {
@@ -200,6 +200,10 @@ body::-webkit-scrollbar-thumb:hover {
           align-items: flex-end;
   height: 100%;
   padding: 0 0 4rem 0;
+}
+
+.half-header .text-container h1 {
+  font-weight: 700;
 }
 
 .half-header .bg {
@@ -511,6 +515,11 @@ body::-webkit-scrollbar-thumb:hover {
   margin: 1rem 0 6rem 0;
 }
 
+.accordion_section .accordion-item {
+  margin: 0.6rem 0;
+  border: none;
+}
+
 .accordion_section .accordion-button {
   background-color: #F7F7F7;
   border: none;
@@ -582,6 +591,18 @@ body::-webkit-scrollbar-thumb:hover {
 .flex-partners-container .partner-card {
   margin: 0.3rem;
   min-width: 25rem;
+}
+
+@media only screen and (max-width: 575px) {
+  .flex-partners-container .partner-card {
+    min-width: 18rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .flex-partners-container .partner-card {
+    min-width: 18rem;
+  }
 }
 
 .partner-card {
