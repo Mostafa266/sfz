@@ -316,30 +316,7 @@
             margin: 5rem 0;
             user-select: none;
 
-            .partner-card {
-                position: relative;
-                width: auto;
-                max-width: 16rem;
-                min-width: 12rem;
-                height: 12rem;
-                background-color: #F7F7F7;
-                border: 1px solid $gold;
-                margin: 0 auto;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 1rem;
-
-                @include breakpoint(smmobile) {
-                    max-width: 10rem;
-
-                    img {
-                        width: 100%;
-                    }
-
-                }
-            }
-
+       
             .swiper-button-prev:after,
             .swiper-rtl .swiper-button-next:after {
                 display: none !important;

@@ -185,6 +185,7 @@ body::-webkit-scrollbar-thumb:hover {
   width: 100vw;
   background-color: #283C65;
   position: relative;
+  max-height: 25rem;
 }
 
 .half-header .text-container {
@@ -501,6 +502,114 @@ body::-webkit-scrollbar-thumb:hover {
 
 @media only screen and (max-width: 1024px) {
   .standalone_text p {
+    width: 100%;
+  }
+}
+
+.accordion_section {
+  position: relative;
+  margin: 1rem 0 6rem 0;
+}
+
+.accordion_section .accordion-button {
+  background-color: #F7F7F7;
+  border: none;
+}
+
+.accordion_section .accordion-button i {
+  position: absolute;
+  left: 1rem;
+}
+
+.accordion_section .accordion-button::after {
+  left: 1rem;
+  position: absolute;
+  background: none;
+}
+
+.accordion_section .accordion-button {
+  background: #965141;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.accordion_section .accordion-button i::before {
+  content: '\f068';
+}
+
+.accordion_section .accordion-button.collapsed {
+  color: #965141;
+  background: #F7F7F7;
+}
+
+.accordion_section .accordion-button.collapsed i::before {
+  content: '\f067';
+}
+
+.flex-partners-container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1366px) {
+  .flex-partners-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .flex-partners-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.flex-partners-container .partner-card {
+  margin: 0.3rem;
+  min-width: 25rem;
+}
+
+.partner-card {
+  position: relative;
+  width: auto;
+  max-width: 16rem;
+  min-width: 12rem;
+  height: 12rem;
+  background-color: #F7F7F7;
+  border: 1px solid #FFD367;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 375px) {
+  .partner-card {
+    max-width: 10rem;
+  }
+  .partner-card img {
     width: 100%;
   }
 }
@@ -1399,36 +1508,6 @@ footer .under-footer .data-container .policies li a {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-}
-
-.home_page .partners_section-slider .partner-card {
-  position: relative;
-  width: auto;
-  max-width: 16rem;
-  min-width: 12rem;
-  height: 12rem;
-  background-color: #F7F7F7;
-  border: 1px solid #FFD367;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1rem;
-}
-
-@media only screen and (max-width: 375px) {
-  .home_page .partners_section-slider .partner-card {
-    max-width: 10rem;
-  }
-  .home_page .partners_section-slider .partner-card img {
-    width: 100%;
-  }
 }
 
 .home_page .partners_section-slider .swiper-button-prev:after,
