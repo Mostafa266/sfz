@@ -129,7 +129,11 @@ function activitiespage(){
 
 
     let newsSlider = new Swiper(".newSLider", { 
-      effect:'fade'
+      effect:'fade',
+      navigation: {
+        nextEl: '.new-slider-nextBtn',
+        prevEl: '.new-slider-prevBtn',
+      },
     });
 
 
