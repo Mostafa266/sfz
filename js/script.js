@@ -94,6 +94,47 @@ function activitiespage(){
   // MENU SCRIPT
   $(document).ready(function () {
     new WOW().init();
+
+    let partnersSlider = new Swiper(".flagsSlider", {
+      breakpoints: {
+        "1440": {
+          slidesPerView: 6,
+          spaceBetween: 0,
+        },
+        "1144": {
+          spaceBetween: 0,
+          slidesPerView: 5,
+        },
+        "900": {
+          spaceBetween: 0,
+          slidesPerView: 4,
+        },
+        "768": {
+          spaceBetween: 5,
+          slidesPerView: 3,
+        },
+        "512": {
+          spaceBetween: 20,
+          slidesPerView: 2,
+        },
+        "450": {
+          slidesPerView: 1,
+        },
+      },
+      navigation: {
+        nextEl: '.partnersSlider-button-next',
+        prevEl: '.partnersSlider-button-prev',
+      },
+    });
+
+
+    let newsSlider = new Swiper(".newSLider", { 
+      effect:'fade'
+    });
+
+
+
+
     $(window).scroll(function () {
       if ($(window).scrollTop() > 100) {
         $('.nav-btn-title').fadeOut(function () {
