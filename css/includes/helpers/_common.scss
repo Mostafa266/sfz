@@ -347,7 +347,14 @@ body {
 .gallery-container {
     margin: 4rem 0;
 
-
+    &.half-gallery{
+        .img-container{
+            img{
+                height: auto;
+                max-height: 68vh;
+            }
+        }
+    }
 
     .img-container {
         width: 100%;

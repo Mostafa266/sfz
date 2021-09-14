@@ -409,6 +409,11 @@ body::-webkit-scrollbar-thumb:hover {
   margin: 4rem 0;
 }
 
+.gallery-container.half-gallery .img-container img {
+  height: auto;
+  max-height: 68vh;
+}
+
 .gallery-container .img-container {
   width: 100%;
   height: 100%;
