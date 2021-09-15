@@ -1674,8 +1674,48 @@ nav .full-nav {
   background-color: #DCC6B6;
 }
 
+nav .full-nav .fullnav-small-list {
+  list-style: none;
+}
+
+nav .full-nav .fullnav-small-list li {
+  margin: 1rem 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+nav .full-nav .fullnav-small-list li a {
+  text-decoration: none;
+  color: #1D1C24;
+}
+
 nav .full-nav--list {
   list-style: none;
+}
+
+nav .full-nav--list li {
+  margin: 0.6rem 0;
+  position: relative;
+}
+
+nav .full-nav--list li::after {
+  position: absolute;
+  content: '';
+  width: 1.5rem;
+  height: 1px;
+  background-color: #1D1C24;
+  right: -2.5rem;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+nav .full-nav--list li a {
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  color: #1D1C24;
+  text-decoration: none;
 }
 
 nav .full-nav .bg-zayed {
