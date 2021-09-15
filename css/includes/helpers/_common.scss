@@ -68,6 +68,29 @@ body {
     align-items: center;
     height: 100%;
 }
+.social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    a{
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        margin: 0.5rem 0;
+        border: 1px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            background: #fff;
+            color: $brown;
+        }
+    }
+}
 
 .btn {
     position: relative;
@@ -360,6 +383,9 @@ body {
     }
 }
 
+.invertWhite{
+    filter: invert(1);
+}
 
 .gallery-container {
     margin: 4rem 0;
