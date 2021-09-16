@@ -354,12 +354,20 @@ body::-webkit-scrollbar-thumb:hover {
 .cards-slider-section .rounded-card-header {
   position: relative;
   margin: 0 auto;
-  width: 100%;
-  height: auto;
+  width: 350px;
+  height: 560px;
+  overflow: hidden;
 }
 
-.cards-slider-section .rounded-card-header img {
-  border-radius: 0.5rem;
+.cards-slider-section .rounded-card-header svg {
+  -webkit-transform: translateX(6rem);
+          transform: translateX(6rem);
+}
+
+.cards-slider-section .rounded-card-header image {
+  -webkit-transform: translateX(-0.1rem);
+          transform: translateX(-0.1rem);
+  height: 100%;
 }
 
 .cards-slider-section .rounded-card .btn {
@@ -1907,8 +1915,9 @@ nav .full-nav .accordion_menu .accordion-item .accordion-button {
 }
 
 nav .full-nav .accordion_menu .accordion-item .accordion-button:focus {
-  outline: none !important;
-  outline-width: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
 }
 
 nav .full-nav .accordion_menu .accordion-item .accordion-button i {

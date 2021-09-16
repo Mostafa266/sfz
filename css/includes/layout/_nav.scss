@@ -302,15 +302,15 @@ nav {
 
                 .accordion-button {
                     outline: none !important;
+                 
                     background-color: transparent;
                     color: $black;
                     padding-right: 3rem;
                     opacity: 0;
                     transform: translateY(3rem);
                     &:focus {
-                        outline: none !important;
-                        outline-width: 0;
-
+                            box-shadow: none;
+                            border: none;
                     }
 
                     i {
