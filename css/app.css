@@ -1614,6 +1614,19 @@ nav .nav-btn {
   transition: all 0.3s ease-in-out;
 }
 
+nav .nav-btn--menuOpen {
+  position: relative;
+  z-index: 99999;
+}
+
+nav .nav-btn--menuOpen .nav-icon span {
+  background-color: #1D1C24 !important;
+}
+
+nav .nav-btn--menuOpen span {
+  color: #1D1C24;
+}
+
 @media only screen and (max-width: 1024px) {
   nav .nav-btn {
     top: -8px;
@@ -1672,10 +1685,14 @@ nav .full-nav {
   top: 0;
   z-index: 9999;
   background-color: #DCC6B6;
+  display: none;
 }
 
 nav .full-nav .fullnav-small-list {
   list-style: none;
+  opacity: 0;
+  -webkit-transform: translateY(3rem);
+          transform: translateY(3rem);
 }
 
 nav .full-nav .fullnav-small-list li {
@@ -1691,6 +1708,9 @@ nav .full-nav .fullnav-small-list li a {
 
 nav .full-nav--list {
   list-style: none;
+  opacity: 0;
+  -webkit-transform: translateY(3rem);
+          transform: translateY(3rem);
 }
 
 nav .full-nav--list li {
@@ -1749,7 +1769,7 @@ nav .full-nav--container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0 5rem 0 2rem;
+  padding: 0 5rem 0 0;
   color: #1D1C24;
 }
 
@@ -1860,6 +1880,14 @@ nav .full-nav .accordion_menu .accordion-item .accordion-button {
   background-color: transparent;
   color: #1D1C24;
   padding-right: 3rem;
+  opacity: 0;
+  -webkit-transform: translateY(3rem);
+          transform: translateY(3rem);
+}
+
+nav .full-nav .accordion_menu .accordion-item .accordion-button:focus {
+  outline: none !important;
+  outline-width: 0;
 }
 
 nav .full-nav .accordion_menu .accordion-item .accordion-button i {
@@ -1884,6 +1912,28 @@ nav .full-nav .accordion_menu .accordion-item .accordion-button i {
 nav .full-nav .accordion_menu .accordion-item .accordion-button::after {
   left: auto;
   right: 0;
+}
+
+nav .full-nav.active > * {
+  -webkit-transition: all 2.4s ease-in-out;
+  transition: all 2.4s ease-in-out;
+  -webkit-transform: none !important;
+          transform: none !important;
+  opacity: 1 !important;
+}
+
+nav .full-nav.active .accordion_menu .accordion-item .accordion-button,
+nav .full-nav.active .fullnav-small-list,
+nav .full-nav.active .full-nav--list {
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform: none !important;
+          transform: none !important;
+  opacity: 1 !important;
+}
+
+nav .full-nav.active .full-nav .accordion-body ul li {
+  display: none;
 }
 
 footer {
