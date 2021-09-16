@@ -219,10 +219,19 @@ nav {
             height: 20%;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
+            transition: all 0.3s ease-in-out;
+            padding: 2rem 0 0 0 ;
 
+            @include breakpoint(allSmalls){
+            padding: 1rem 0 0 0 ;
+            }
+            @include breakpoint(mobile){
+            padding: 1rem 0 0 0 ;
+            }
             img {
                 width: 7rem;
+                transition: all 0.3s ease-in-out;
             }
         }
 

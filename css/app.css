@@ -1484,6 +1484,10 @@ body::-webkit-scrollbar-thumb:hover {
   font-size: 1.3rem;
 }
 
+.stopScroll {
+  overflow: hidden !important;
+}
+
 aside {
   position: fixed;
   right: 0;
@@ -1796,13 +1800,30 @@ nav .full-nav--top {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  padding: 2rem 0 0 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  nav .full-nav--top {
+    padding: 1rem 0 0 0;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  nav .full-nav--top {
+    padding: 1rem 0 0 0;
+  }
 }
 
 nav .full-nav--top img {
   width: 7rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 nav .full-nav--center {

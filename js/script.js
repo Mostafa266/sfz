@@ -191,9 +191,8 @@
       $('.nav-btn-title').fadeIn();
       $('.nav-btn').removeClass('nav-collapse')
       $(this).toggleClass('nav-btn--menuOpen')
-      $('.full-nav').toggleClass('active')
+      $('.full-nav').toggleClass('active');
+      $('html').toggleClass('stopScroll')
     })
-
-   
 
   });
